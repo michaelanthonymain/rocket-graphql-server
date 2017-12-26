@@ -1,14 +1,28 @@
 export const schema = [`
 type Hotel {
   id: Int
+  ns: String
+  branding: String
+  mainImage: Image
+  images: [ Image ]
   description: String
   amenities: [ Amenity ]
   amenityCategories: [ Amenity ]
   name: String
   phoneNumber: String
   address: Address
+  stars: Float
+  checkInHour: Int
+  checkOutHour: Int
   rating: Float
   numberOfReviews: Int
+  checkInText: String
+  checkOutText: String
+  brand: Brand
+}
+
+type Image {
+  url: String
 }
 
 type Amenity {
@@ -34,6 +48,10 @@ type State {
 type Country {
   code: String
   name: String
+}
+
+type Brand {
+  code: String
 }
 `];
 

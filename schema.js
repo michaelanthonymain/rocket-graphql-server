@@ -12,8 +12,8 @@ type Query {
 
 const rootResolvers = {
     Query: {
-        hotel(id) {
-            return Hotel.getOne(id);
+        hotel(_, args) {
+            return Hotel.get(args.id);
         }
     }
 };
