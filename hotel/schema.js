@@ -1,12 +1,4 @@
-import { makeExecutableSchema } from 'graphql-tools';
-import resolvers from './resolvers.js';
-
-const typeDefs = `
-type Query {
-  hotel(id: Int): Hotel
-  getFortuneCookie: String
-}
-
+export const schema = [`
 type Hotel {
   id: Int
   description: String
@@ -43,8 +35,6 @@ type Country {
   code: String
   name: String
 }
-`;
+`];
 
-const schema = makeExecutableSchema({ typeDefs, resolvers });
-
-export default schema;
+export const resolvers = {};
