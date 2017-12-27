@@ -66,6 +66,25 @@ When you paste this on the left side of the page:
 }
 ```
 
+```Search
+{
+  search {
+    id
+    checkInDate
+    checkOutDate
+    rewardProgram {
+      name
+    }
+    promotion
+    rooms
+    results {
+      hotel {
+        name
+      }
+    }
+  }
+}
+```
 and hit the play button (cmd-return), then you should get this on the right side:
 
 ```json
